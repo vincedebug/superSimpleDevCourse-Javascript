@@ -9,8 +9,27 @@
 
     <script>
 
-        var randNum
-        console.log(Math.random);
+        var randNumber = Math.random();
+
+        function getRandomNum(x) {
+
+            
+            return Math.floor(randNumber * x);
+                   
+        }
+
+        function getRandomNumber(x) {
+
+  
+            return Math.ceil(randNumber * x);
+                   
+        }
+
+        const randNum = getRandomNum(11);
+        const randomNumber = getRandomNumber(11);
+        
+        console.log(randomNumber);
+        console.log(randNum);
     </script>
     
 </body>
