@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        var cartQuantity = 0;
+
+        function plusOne(){  
+            cartQuantity >= 10 ? alert('The cart is full') : cartQuantity++; console.log(`Cart quantity: ${cartQuantity}`);
+        }
+        function plusTwo(){
+            cartQuantity >= 10 ? alert('The cart is full') : cartQuantity+=2; console.log(`Cart quantity: ${cartQuantity}`);
+        }
+        function plusThree(){
+            cartQuantity >= 10 ? alert('The cart is full') : cartQuantity+=3; console.log(`Cart quantity: ${cartQuantity}`);
+        }
+        function plusFour(){
+            cartQuantity >= 10 ? alert('The cart is full') : cartQuantity+=4; console.log(`Cart quantity: ${cartQuantity}`);
+        }
+        function plusFive(){
+            cartQuantity >= 10 ? alert('The cart is full') : cartQuantity+=5; console.log(`Cart quantity: ${cartQuantity}`);
+        }
+
+        function minusOne(){
+            cartQuantity <= 0 ? alert('Not enough items in the cart') : cartQuantity--; console.log(`Cart quantity: ${cartQuantity}`);
+        }
+
+        function minuTwo(){
+            cartQuantity <= 0 ? alert('Not enough items in the cart') : cartQuantity-=2; console.log(`Cart quantity: ${cartQuantity}`);
+        }
+        function minusThree(){
+            cartQuantity <= 0 ? alert('Not enough items in the cart') : cartQuantity-=3; console.log(`Cart quantity: ${cartQuantity}`);
+        }
+        
+
+    </script>
+    
+    <button onclick="console.log(`Cart quantity: ${cartQuantity}`);">Show Quantity</button>
+
+    <button onclick="plusOne()">Add to Cart</button>
+
+    <button onclick="plusTwo() ">+2</button>
+
+    <button onclick="plusThree()">+3</button>
+
+    <button onclick="plusFour() ">+4</button>
+
+    <button onclick="plusFive() ">+5</button>
+
+    <button onclick="minusOne()">Remove from cart</button>
+
+    <button onclick="minusThree()">-2</button>
+
+    <button onclick="minusThree()">-3</button>
+    
+    <button onclick="cartQuantity = 0; console.log('Cart was reset.'); console.log(`Cart quantity: ${cartQuantity}`);">Reset Cart</button>
+
+
+
+    </body>
+</html>
