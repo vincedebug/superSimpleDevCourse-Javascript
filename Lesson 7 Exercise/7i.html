@@ -20,19 +20,18 @@
                 return;
             }
             if (cartQuantity <= -1) {
-                cartQuantity = 0;
+                number = cartQuantity;
+                cartQuantity = cartQuantity-number;
+                console.log(`Cart quantity: ${cartQuantity}`);
                 alert("The cart is empty");
                 return;
 
             }
-            if (cartQuantity <= -1) {
-                cartQuantity = cartQuantity-number;
-                alert("The cart is empty");
-                return; 
-            }
+          
+            console.log(`Cart quantity: ${cartQuantity}`);
+
 
         
-            console.log(`Cart quantity: ${cartQuantity}`);
             
         }
               
