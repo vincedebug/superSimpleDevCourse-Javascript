@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="hid()">heads</button>
+    <button onclick="til()">tails</button>
+
+    <p class="display1"></p>
+
+
+    <script>
+        function hid() {
+            var pp = document.querySelector('.display1');
+            pp.textContent = 'You choose: heads';
+
+        }
+        function til() {
+            var pp = document.querySelector('.display1');
+            pp.textContent = 'You choose: tails';
+
+        }
+    </script>
+
+
+
+</body>
+
+
+</html>

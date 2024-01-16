@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" class="textInput">  
+    <button onclick="submit()">submit</button>
+    <p class="display"> </p>
+
+
+    <script>
+
+        function handleKeyDown(event) {
+            if (event.key === 'Enter') {
+                submit();
+            }
+        }
+
+        document.addEventListener('keydown', handleKeyDown);
+
+
+
+        function submit() {
+            var name = document.querySelector('.textInput');
+
+            var inputValue = name.value;
+
+            var yourName = document.querySelector('.display');
+            yourName.textContent = 'Your name is: '+ inputValue;
+
+        }
+    </script>
+    
+    
+</body>
+</html>
