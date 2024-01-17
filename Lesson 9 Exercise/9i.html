@@ -15,6 +15,7 @@
         function updateCartQuantity(number) {
 
             cartQuantity+=number;
+            displayCartQuantity();
 
             if (cartQuantity >= 11) {
                 cartQuantity = cartQuantity-number;
@@ -43,6 +44,14 @@
             var quantity = document.querySelector('.displayQuantity');
             quantity.textContent = `Cart quantity: ${cartQuantity}`;
         }
+
+        function resetQuantity() {
+            cartQuantity = 0;
+            var quantity = document.querySelector('.displayQuantity');
+            quantity.textContent = `Cart quantity: ${cartQuantity}`;
+
+        }
+
               
     </script>
     
@@ -64,7 +73,7 @@
 
     <button onclick="updateCartQuantity(-3)">-3</button>
     
-    <button onclick="cartQuantity = 0; console.log('Cart was reset.'); console.log(`Cart quantity: ${cartQuantity}`);">Reset Cart</button>
+    <button onclick="resetQuantity()">Reset Cart</button>
 
     <p class="displayQuantity">Cart quantity: 0</p>
 
