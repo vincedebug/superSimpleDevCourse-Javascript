@@ -8,8 +8,8 @@
 <body>
 
     <p>
-        <p class="displayNumber">
-            _
+        <p class="textOutput">
+            
         </p>
     </p>
 
@@ -21,7 +21,7 @@
     
         <button onclick="updateCalculation('3')">3</button>
     
-        <button onclick="calculation += ' + '; console.log(calculation) ">+</button>
+        <button onclick="updateCalculation(' + ')">+</button>
 
 
     </p>
@@ -64,7 +64,7 @@
     </p>
 
     <p>
-        <button onclick="calculation = ''; console.log(calculation) ">Clear</button>
+        <button onclick="remove()">Clear</button>
 
 
 
@@ -74,23 +74,35 @@
     
     <script>
 
+        var calculation = '';
+
         function updateCalculation(add) {
             
-            // console.log(calculation);
-
-            const dispay = document.querySelector('.displayNumber')
-            dispay.textContent = add;
-
-            localStorage.setItem(calculation, eval(calculation));
+            var dispay = document.querySelector('.textOutput')
+            dispay.textContent += add;
+            calculation += add;
+            console.log(calculation);
 
 
         }
 
         function result() {
+            var dispay = document.querySelector('.textOutput')
+            dispay.textContent = eval(calculation);
+            console.log(eval(calculation));
+            localStorage.setItem(calculation, eval(calculation));
+
             
+        }
+
+        function remove() {
+            var display = document.querySelector('.textOutput')
+            calculation = '';
+            display.textContent = '';
         }
 
 
     </script>
 </body>
 </html>
+
