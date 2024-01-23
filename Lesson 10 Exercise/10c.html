@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button class="js-button">test</button>
+    
+    <script>
+
+        var testButton = document.querySelector('.js-button')
+
+        if (testButton.classList.contains('s-button')) {
+            console.log('meron');
+        } else {
+            console.log('wala');
+            testButton.classList.add('may-class-na');
+        }
+    </script>
+</body>
+</html>
