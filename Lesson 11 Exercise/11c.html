@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+
+        function arraySwap(array) {
+
+            const firstArray = array[0];
+            const lastArray = array[array.length - 1];
+
+            array[0] = array[array.length - 1];
+            array[array.length -1] = firstArray;
+
+            return array;
+        
+        }
+
+        console.log(arraySwap([1,2,3,4,5]));
+
+
+
+    </script>
+    
+</body>
+</html>
