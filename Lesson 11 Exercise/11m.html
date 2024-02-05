@@ -25,10 +25,15 @@
                     minMax.min = nums[i];
                 }             
             }
+            if (nums.length == 0){
+                minMax.min = minMax.max = null;
+                return minMax;
+            }
             return minMax;
         }
         console.log(minMax([]));
         console.log(minMax([3]));
+
 
     </script>
     
