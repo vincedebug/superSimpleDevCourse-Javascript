@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+
+        function countWords(words) {
+
+            const fruitCounter = {};
+        
+
+            for (let i = 0; i < words.length ; i++) {
+
+                const word = words[i];
+                if (!fruitCounter[word]) {
+                    fruitCounter[word] = 1;
+                } else {
+                    fruitCounter[word]++;
+                }
+                    
+        }
+        return fruitCounter;
+    }
+
+        console.log(countWords(['banana','apple', 'banana', 'grapes', 'banana', 'banana']));
+    </script>
+
+
+
+    
+</body>
+</html>
