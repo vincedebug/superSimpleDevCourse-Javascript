@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+    <script>
+        // this function remove last two eggs in an array using reverse method
+
+        function removeEgg(foods) {
+            var result = []; 
+            let counter = 0;
+
+            
+            var revFood = foods.reverse() ;  // reverse the array 
+
+            
+            for (let i = 0; i < revFood.length; i++) { // loop the reversed array 
+
+                if (revRes[i] === 'egg' && counter < 2) { // check if there are 2 remove/skipped eggs 
+                     // check if the element i is an egg 
+                     // if egg add to counter
+                    // then coninue to push other element
+                    counter++;                       
+                    continue; 
+                    }
+                    result.push(revFood[i]); // push element in the result array
+                }
+            return result.reverse(); // return the reversed array to return to original arrangement 
+            }
+                
+                
+            
+        console.log(removeEgg(['egg', 'apple', 'egg', 'egg','ham']));
+
+    </script>
+    
+</body>
+</html>

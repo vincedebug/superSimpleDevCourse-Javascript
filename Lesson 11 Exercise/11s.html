@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
 <body>
 
     <script>
+        // This function remove the first two egg in an array
+
         function removeEgg(foods) {
             var result = []; 
+            let eggsRemoved = 0;
             
             // loop through the array of foods
             for (let i = 0; i < foods.length; i++) {
-                if (foods[i] == 'egg'){
-                    counter++;
-                    continue;
-                } 
-                result = result.concat(foods[i]);
-                
-    
+
+                // check if there are 2 remove/skipped eggs and  
+                if (foods[i] === 'egg' && counter < 2) {  
+                    // check if the element i is an egg 
+                    // if egg add to counter
+                    // then coninue to push other element
+                    eggsRemoved++;  
+                    continue; 
                 }
-                return result;
+                // push element in the result array
+                result.push(foods[i]); 
+
+            }
+    
                 
             }
+                return result;
+                
             
-        
-         
+            
+        console.log(removeEgg(['egg', 'egg', 'banana', 'egg', 'egg',  'apple', 'egg', 'egg','ham']));
 
-        console.log(removeEgg(['egg', 'egg', 'egg', 'apple', 'egg', 'egg','ham']));
-
-        // ['egg', 'apple', 'egg', 'egg', 'ham']
-
-        // if its egg continue to append next index
-        // if 2 eggs remove continue to append what ever
+    
 
     </script>
     
