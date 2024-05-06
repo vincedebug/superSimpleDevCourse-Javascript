@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+
+        function findIndex(arr, word) {
+            for (let i = 0; i <= arr.length ; i++){
+                if (arr[i] == word)  {
+                    return i;  // if there is word in the array return the index of that word
+                    isEqual += 1;
+                }
+            }
+            
+                return -1;
+        }
+
+        function unique(arr) { 
+
+            const uniqueArr = [];
+
+            for (j = 0; j < arr.length; j++){
+                const word = arr[j];   
+                
+                if (findIndex(uniqueArr, word) === -1) {
+                    uniqueArr.push(word);
+                }
+
+            }
+
+            return uniqueArr;
+          
+        }
+
+        console.log(unique(['apple', 'orange', 'banana', 'egg']));
+
+    </script>
+    
+</body>
+</html>
