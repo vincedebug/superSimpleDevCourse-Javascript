@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <script>
+      /*
+      function greeting() {
+        console.log("hello");
+      }
+
+      greeting();
+
+      const function1 = function greeting1() {
+        console.log("hello again");
+      };
+
+      console.log(function1);
+
+      console.log(typeof function1);
+
+      function1();
+
+      const object1 =  {
+        name: "vince",
+        age: function age() {
+          console.log(2);
+        }
+
+      }
+
+      object1.age();
+      console.log(object1.name);
+
+
+      function display(param) {
+        
+      }
+
+
+
+      display(5);
+
+
+      function run(param) {
+        param();
+      }
+
+      run(function() {
+        console.log("hello");
+
+      });
+      */
+
+      setTimeout(function() {
+        console.log("time-out");
+      }, 5000);
+
+      console.log("next line");
+
+
+      setInterval(function() {
+        console.log('interval')
+      }, 1000);
+
+
+      const arrowFunction = () => {
+        console.log('Hello world');
+      };
+
+      const addOne = param => {
+        console.log(param + 1);
+      };
+
+      const oneLiner = () => 1 + 2;
+
+      addOne(1);
+
+      arrowFunction();
+
+      console.log(oneLiner());
+     
+    </script>
+  </body>
+</html>

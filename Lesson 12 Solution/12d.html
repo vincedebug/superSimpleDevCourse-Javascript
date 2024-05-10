@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>12d</title>
+</head>
+<body>
+    <button id="finished-button" onclick="changeValue()"> finish? </button>
+
+    <script>
+
+            const finished = () => {
+                const myButton = document.getElementById("finished-button");
+                myButton.innerText = 'finished' ;
+
+            };
+
+            const changeValue = () => {
+            
+            const myButton = document.getElementById("finished-button");
+            myButton.innerText = 'loading' ;
+
+            setInterval(finished, 1000);    
+        };
+        
+        
+    </script>
+    
+</body>
+</html>

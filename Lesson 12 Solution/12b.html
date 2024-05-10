@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>12a</title>
+</head>
+<body>
+
+    <script>
+
+        const add = () => {
+            console.log(2+3);
+        }
+        add();
+        add();
+
+        const runTwice = fun => {
+            runTwice();
+
+        }
+
+        runTwice(function() {console.log('12b')});
+        
+        runTwice(add);
+    </script>
+    
+</body>
+</html>
