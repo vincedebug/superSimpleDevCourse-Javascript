@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>12f</title>
+</head>
+<body>
+
+    <button class="add-to-cart" onclick="updateCart()">Add to cart</button>
+
+    <p class="update-message"></p>
+
+    <script>
+        let timeoutId;
+
+        // my solution
+        // create an element dynamically in a function then 
+        // append the data 
+        // i used setinterval
+
+        function updateCart() {
+            const update_message = document.querySelector('.update-message');
+            update_message.innerHTML = "Added";
+
+            clearTimeout(timeoutId);
+            
+            timeoutId = setTimeout(function() {
+                update_message.innerHTML = ' ';
+            }, 2000);
+
+            
+
+        }
+        
+    </script>
+    
+</body>
+</html>

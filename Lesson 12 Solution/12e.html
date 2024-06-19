@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>12e</title>
+</head>
+<body>
+
+    <button class="add-to-cart" onclick="updateCart()">Add to cart</button>
+
+    <p class="update-message" onclick="updateCart()">nothing</p>
+
+    <script>
+
+        // my solution
+        // create an element dynamically in a function then 
+        // append the data 
+        // i used setinterval
+
+        function updateCart() {
+            const added_message = document.createElement('p');
+            added_message.textContent = "Added";
+            document.body.appendChild(added_message);
+
+            const update_message = document.querySelector('.update-message');
+
+            update_message.innerHTML = "Added";
+
+            setInterval(function() {
+                added_message.innerHTML = ' ';
+                update_message.innerHTML = ' '
+            }, 2000);
+        }
+        
+    </script>
+    
+</body>
+</html>

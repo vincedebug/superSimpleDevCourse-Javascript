@@ -4,9 +4,13 @@
     <title>12d</title>
 </head>
 <body>
-    <button id="finished-button" onclick="changeValue()"> finish? </button>
+    <button id="finished-button" onclick="changeValue()">Start</button>
+
+    <button class="button" onclick="updateButton()">Start?</button>
 
     <script>
+
+            // my own solution
 
             const finished = () => {
                 const myButton = document.getElementById("finished-button");
@@ -21,8 +25,44 @@
 
             setInterval(finished, 1000);    
         };
-        
-        
+
+            // Soluion
+
+        function updateButton() {
+            const button = document.querySelector('.button');
+
+            button.innerHTML = 'Loading...';
+            setTimeout(function() {
+                button.innerHTML = 'Finished!';
+            }, 1000);
+        }
+
+        // regular function 
+        const regularFunction = function(param, param2) {
+            console.log('hello');
+            return 5;
+        };
+
+        regularFunction();
+
+        // Arrow Function
+        const arrowFunction = (param, param2) => {
+            console.log('hello');
+            return 5;
+        };
+
+        arrowFunction();
+
+
+        const oneParam = param => {
+            console.log(param + 1)
+        }
+
+        oneParam(2);
+
+        const oneLine = () =>  2 + 3;
+        console.log(oneLine());
+
     </script>
     
 </body>
