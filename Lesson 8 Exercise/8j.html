@@ -3,43 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>8j</title>
 </head>
 <body>
-
     <button onclick="playGame('heads')">heads</button>
     <button onclick="playGame('tails')">tails</button>
 
     <script>
-
-        var randNumber = Math.random();
-
-        console.log(randNumber);
-        var result = randNumber < 0.5 ? 'heads' : 'tails';
-
         const score = {
             wins: 0,
             losses: 0
         };
 
         function playGame(guess) {
+            const randNumber = Math.random();
+            const tossedResult = randNumber < 0.5 ? 'heads' : 'tails';
 
-            if (result === guess) {
-                outCome = 'You win';
-                score.wins+=1;
+            const result = (guess === tossedResult ? 'you win' : 'You lose!');
+
+            if(result === 'you win') {
+                score.wins += 1;
             } else {
-                outCome = 'You lose';
-                score.losses+=1;
+                score.losses += 1;
             }
-            console.log(outCome);
-            
-            console.log('wins: '+ score.wins + ',', 'losses: '+ score.losses);
-
         }
-
-        
-      
-
     </script>
     
 </body>

@@ -64,9 +64,14 @@
         console.log('interval')
       }, 1000);
 
+      const regularFunction = function(param, param2) {
+        console.log('hello');
+        return 5;
+      };
 
-      const arrowFunction = () => {
+      const arrowFunction = (param, param2) => {
         console.log('Hello world');
+        return 5;
       };
 
       const addOne = param => {
@@ -80,6 +85,12 @@
       arrowFunction();
 
       console.log(oneLiner());
+
+      const oneParam = param => {
+        console.log(param + 1);
+      };
+
+      oneParam(1);
 
       
      
