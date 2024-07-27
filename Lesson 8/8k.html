@@ -22,9 +22,9 @@
             const result = (guess === tossedResult ? 'you win' : 'You lose!');
 
             if(result === 'you win') {
-                score.wins += 1;
+                score.wins++;
             } else {
-                score.losses += 1;
+                score.losses++;
             }
         
             localStorage.setItem('score', JSON.stringify(score));

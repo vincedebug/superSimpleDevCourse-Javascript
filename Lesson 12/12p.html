@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>12p</title>
+</head>
+<body>
+    <button id="finished-button" onclick=""> finish? </button>
+
+    <script>
+       function updateButton() {
+        const button = document.getElementById('finished-button');
+
+        setTimeout(() => {
+          button.innerHTML = 'Finished!';
+        }, 1000);
+       }
+    </script>
+</body>
+</html>
