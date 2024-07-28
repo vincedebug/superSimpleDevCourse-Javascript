@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>8i</title>
 </head>
 <body>
 
@@ -12,18 +12,12 @@
 
     <script>
 
-        var randNumber = Math.random();
-
-        console.log(randNumber);
-        var result = randNumber < 0.5 ? 'heads' : 'tails';
-
         function playGame(guess) {
-            var outCome = result == guess ? 'You Win' :  'You Lose';
-            console.log(outCome);
+            const randNumber = Math.random();
+            const result = randNumber < 0.5 ? 'heads' : 'tails';
+            console.log(result === guess ? 'You Win' :  'You Lose');
 
         }
-      
-
     </script>
     
 </body>

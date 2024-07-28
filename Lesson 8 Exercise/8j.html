@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>8i</title>
 </head>
 <body>
 
@@ -12,34 +12,24 @@
 
     <script>
 
-        var randNumber = Math.random();
-
-        console.log(randNumber);
-        var result = randNumber < 0.5 ? 'heads' : 'tails';
-
         const score = {
             wins: 0,
             losses: 0
-        };
-
-        function playGame(guess) {
-
-            if (result === guess) {
-                outCome = 'You win';
-                score.wins+=1;
-            } else {
-                outCome = 'You lose';
-                score.losses+=1;
-            }
-            console.log(outCome);
-            
-            console.log('wins: '+ score.wins + ',', 'losses: '+ score.losses);
-
         }
 
-        
-      
+        function playGame(guess) {
+            const randNumber = Math.random();
+            const result = randNumber < 0.5 ? 'heads' : 'tails';
+            const outcome = result === guess ? 'You Win' :  'You Lose';
 
+            if (outcome === 'You Win')
+                score.wins+=1;
+            else 
+                score.losses+=1;
+
+            console.log(score);
+
+        }
     </script>
     
 </body>

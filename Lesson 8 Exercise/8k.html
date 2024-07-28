@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>8i</title>
 </head>
 <body>
 
@@ -12,37 +12,29 @@
 
     <script>
 
-        var randNumber = Math.random();
-
-        console.log(randNumber);
-        var result = randNumber < 0.5 ? 'heads' : 'tails';
-
-        const score = {
+        const score = JSON.parse(localStorage.getItem('score')) || {
             wins: 0,
             losses: 0
         };
+    
 
         function playGame(guess) {
+            const randNumber = Math.random();
+            const result = randNumber < 0.5 ? 'heads' : 'tails';
+            const outcome = result === guess ? 'You Win' :  'You Lose';
 
-            if (result === guess) {
-                outCome = 'You win';
+            if (outcome === 'You Win')
                 score.wins+=1;
-                localStorage.setItem('wins', JSON.stringify(score.wins));
-            } else {
-                outCome = 'You lose';
+            else 
                 score.losses+=1;
-                localStorage.setItem('losses', JSON.stringify(score.losses));
 
-            }
-            console.log(outCome);
-            
-            console.log('wins: '+ score.wins + ',', 'losses: '+ score.losses);
+            console.log(score);
+
+            const strScore = JSON.stringify(score);
+
+            localStorage.setItem('score', strScore);
 
         }
-
-        
-      
-
     </script>
     
 </body>
