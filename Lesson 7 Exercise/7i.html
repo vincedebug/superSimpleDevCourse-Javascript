@@ -1,63 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>7i</title>
 </head>
 <body>
-
     <script>
-        var cartQuantity = 0;
-
-        function updateCartQuantity(number) {
-
-            cartQuantity+=number;
-
-            if (cartQuantity >= 11) {
-                cartQuantity = cartQuantity-number;
-                alert("The cart is full");
-                return;
+        function convertLength(length, from, to) {
+            if (from !== 'km' && from !== 'miles' && from !== 'ft') {
+                return `Invalid unit: ${from}`;
+            } else if (to !== 'km' && to !== 'miles' && to !== 'ft') {
+            return `Invalid unit: ${to}`;
             }
-            if (cartQuantity <= -1) {
-                number = cartQuantity;
-                cartQuantity = cartQuantity-number;
-                console.log(`Cart quantity: ${cartQuantity}`);
-                alert("The cart is empty");
-                return;
 
+
+            if (from === 'miles' && to === 'km') {
+                return `${length * 1.6} km`; 
+            } else if (from === 'km' && to === 'miles') {
+                return `${length / 1.6} miles`;
+            } else if (from === 'ft' && to === 'miles') { // feet to miles
+                return `${length / 5280} `;
+            } else if (from === 'miles' && to === 'ft') { // miles to feet
+                return `${length * 5280} ft`;
+            } else if (from === 'ft' && to === 'km') { // feet to km
+                return `${length * 0.0003048} km`;
+            } else if (from === 'km' && to === 'ft') { // km to feet
+                return `${length * 3281} ft`
+            } else if (from === to) {
+                return `${length} ${from}`;                                           
             }
-          
-            console.log(`Cart quantity: ${cartQuantity}`);
-
-
-        
-            
         }
-              
+       
+        console.log(convertLength(50, 'miles', 'km'));
+        console.log(convertLength(32, 'km', 'miles'));
+        console.log(convertLength(50, 'km', 'km'));
+
+        console.log(convertLength(5, 'miles', 'km'));
+        console.log(convertLength(5, 'miles', 'ft'));
+        console.log(convertLength(5, 'km', 'ft'));
+
+        console.log(convertLength(5, 'lbs', 'lbs'));
     </script>
-    
-    <button onclick="console.log(`Cart quantity: ${cartQuantity}`);">Show Quantity</button>
-
-    <button onclick="updateCartQuantity(1)">Add to Cart</button>
-
-    <button onclick="updateCartQuantity(2)">+2</button>
-
-    <button onclick="updateCartQuantity(3)">+3</button>
-
-    <button onclick="updateCartQuantity(4)">+4</button>
-
-    <button onclick="updateCartQuantity(5)">+5</button>
-
-    <button onclick="updateCartQuantity(-1)">Remove from cart</button>
-
-    <button onclick="updateCartQuantity(-2)">-2</button>
-
-    <button onclick="updateCartQuantity(-3)">-3</button>
-    
-    <button onclick="cartQuantity = 0; console.log('Cart was reset.'); console.log(`Cart quantity: ${cartQuantity}`);">Reset Cart</button>
-
-
-
-    </body>
+</body>
 </html>
