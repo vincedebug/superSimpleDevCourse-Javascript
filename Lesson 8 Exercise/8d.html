@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>8d</title>
 </head>
 <body>
 
@@ -19,8 +19,6 @@
             price: 2000
         };
 
-
-
         
         product1.price+=500;
         console.log(product1);
@@ -31,12 +29,7 @@
 
 
         function compareProduct(product1, product2) {
-            if (product1.price < product2.price) {
-                return product1.name + ' is less expensive than ' + product2.name;
-            } else {
-                return product2.name + ' is less expensive than ' + product1.name;
-            }
-
+            return (product1.price < product2.price) ? product1.name : product2.name;
         }
         console.log(compareProduct(product1, product2));
 
