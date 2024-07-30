@@ -29,25 +29,22 @@
         <p>
             <button onclick="updateCalculation(0)">0</button>
             <button onclick="updateCalculation('.')">.</button>
-            <button onclick="updateCalculation(' = ')">=</button>
+            <button onclick="console.log(eval(calculation));">=</button>
             <button onclick="updateCalculation(' / ')">/</button>
             </p>
 
             <p>
-                <button onclick="updateCalculation('Clear')">Clear</button>
+                <button onclick="
+                    calculation = '';
+                    console.log(calculation);
+                ">Clear</button>
             </p>
 
         <script>
             let calculation = '';
 
-            function updateCalculation(input) {
-                if (input === ' = ') {
-                    console.log(eval(calculation));
-                } else if (input === 'Clear') {
-                    calculation = '';
-                } else {
-                    console.log(calculation+=input);
-                }
+            function updateCalculation(value) {
+                console.log(calculation+=value);
             }
         </script>   
     </body>

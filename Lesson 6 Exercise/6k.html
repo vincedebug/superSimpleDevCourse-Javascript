@@ -1,59 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<html>
+  <head>
+    <title>6k</title>
+  </head>
+  <body>
+    <button onclick="
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">Show Quantity</button>
+
+    <button onclick="
+      if (cartQuantity + 1 > 10) {
+        alert('The cart is full');
+      } else {
+        cartQuantity++;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+    ">Add to Cart</button>
+
+    <button onclick="
+      if (cartQuantity + 2 > 10) {
+        alert('The cart is full');
+      } else {
+        cartQuantity += 2;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+    ">+2</button>
+
+    <button onclick="
+      if (cartQuantity + 3 > 10) {
+        alert('The cart is full');
+      } else {
+        cartQuantity = cartQuantity + 3;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+    ">+3</button>
+
+    <button onclick="
+      if (cartQuantity + 4 > 10) {
+        alert('The cart is full');
+      } else {
+        cartQuantity += 4;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+    ">+4</button>
+
+    <button onclick="
+      if (cartQuantity + 5 > 10) {
+        alert('The cart is full');
+      } else {
+        cartQuantity += 5;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+    ">+5</button>
+
+    <button onclick="
+      cartQuantity--;
+      console.log(`Cart quantity: ${cartQuantity}`);
+      ">Remove from cart</button>
+
+    <button onclick="
+      cartQuantity -= 2;
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">-2</button>
+
+    <button onclick="
+      cartQuantity -= 3;
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">-3</button>
+
+    <button onclick="
+      cartQuantity = 0;
+      console.log('Cart was reset.');
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">Reset Cart</button>
 
     <script>
-
-        var cartQuantity = 0;
-
-        function plusOne(){  
-            cartQuantity >= 10 ? alert('The cart is full') : cartQuantity++; console.log(`Cart quantity: ${cartQuantity}`);
-        }
-        function plusTwo(){
-            cartQuantity >= 10 ? alert('The cart is full') : cartQuantity+=2; console.log(`Cart quantity: ${cartQuantity}`);
-        }
-        function plusThree(){
-            cartQuantity >= 10 ? alert('The cart is full') : cartQuantity+=3; console.log(`Cart quantity: ${cartQuantity}`);
-        }
-        function plusFour(){
-            cartQuantity >= 10 ? alert('The cart is full') : cartQuantity+=4; console.log(`Cart quantity: ${cartQuantity}`);
-        }
-        function plusFive(){
-            cartQuantity >= 10 ? alert('The cart is full') : cartQuantity+=5; console.log(`Cart quantity: ${cartQuantity}`);
-        }
-
-        function minusOne(){
-            cartQuantity <= 0 ? alert('Not enough items in the cart') : cartQuantity--; console.log(`Cart quantity: ${cartQuantity}`);
-        }
-
+      let cartQuantity = 0;
     </script>
-    
-    <button onclick="console.log(`Cart quantity: ${cartQuantity}`);">Show Quantity</button>
-
-    <button onclick="plusOne()">Add to Cart</button>
-
-    <button onclick="plusTwo() ">+2</button>
-
-    <button onclick="plusThree()">+3</button>
-
-    <button onclick="plusFour() ">+4</button>
-
-    <button onclick="plusFive() ">+5</button>
-
-    <button onclick="minusOne()">Remove from cart</button>
-
-    <button onclick="cartQuantity-=2; console.log(`Cart quantity: ${cartQuantity}`); ">-2</button>
-
-    <button onclick="cartQuantity-=3; console.log(`Cart quantity: ${cartQuantity}`); ">-3</button>
-    
-    <button onclick="cartQuantity = 0; console.log('Cart was reset.'); console.log(`Cart quantity: ${cartQuantity}`);">Reset Cart</button>
-
-
-
-    </body>
+  </body>
 </html>
