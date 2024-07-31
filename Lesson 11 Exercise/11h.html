@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11h</title>
+</head>
+<body>
+  <script>
+    function addOne(array) {
+      const newArr = [];
+
+      for (let i = 0; i < array.length; i++) {
+        newArr.push(array[i] + 1); // i was wrong because i am accumulating it rather than adding and pushing to the new array
+        }
+      return newArr;
+    }
+
+    console.log(addOne([1,2,4]));
+  </script>
+</body>
+</html>
