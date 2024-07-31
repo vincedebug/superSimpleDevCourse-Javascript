@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11l</title>
+</head>
+<body>
+  <script>
+    // get the min and max value of an array
+    function minMax(nums) {
+
+      // creates an object to store the current max and min
+      const result = {
+        min: nums[0],
+        max: nums[0]
+      }
+
+      // loop through the array
+      for (let i = 0; i < nums.length; i++) {
+
+        // storing the value in an array
+        const value = nums[i];
+
+        // compare the current max to the array
+        // if the value of an array is less than the current min it will replace the current min and the new value will be assign to it
+        if (value < result.min) {
+          result.min = value;
+        } 
+
+        // this applies to this if statement
+        if (value < result.max) {
+          result.max = value;
+        }
+      }
+      return `min: ${result.min}, max: ${result.max}`;
+    }
+
+
+    console.log(minMax([-2,3,-5,7,-10]));
+  </script>
+</body>
+</html>
