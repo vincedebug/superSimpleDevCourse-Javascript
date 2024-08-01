@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11o</title>
+</head>
+<body>
+  <script>
+    const array = ['hello', 'world', 'search', 'good'];
+
+    // set the initial value to -1 
+    // if there's no search in the array
+    let indexofSearch = -1;
+    // loop through the array
+    for (let i = 0; i < array.length; i++) {
+      // check if theres a word search in every index
+      if (array[i] === 'search') {
+        // change the value of the index of search to the index of the word search
+        indexofSearch = i;
+      }
+    }
+
+    console.log(indexofSearch);
+  </script>
+</body>
+</html>
