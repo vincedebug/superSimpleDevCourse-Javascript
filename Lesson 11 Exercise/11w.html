@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11w</title>
+</head>
+<body>
+  <script>
+
+    // return the index of the word 
+    // if none return the -1
+    function findIndex(array, word) {
+    // loop through the array
+    for (let i = 0; i < array.length; i++) {
+      // check if theres a word search in every index
+      if (array[i] === word) {
+        // change the value of the index of search to the index of the word search
+        return i;
+      }
+    }
+    return -1;
+    }
+
+    function unique(array) {
+     const uniqueArray = [];
+     
+    
+     for (let i = 0; i < array.length; i++) {
+      const word = array[i]
+
+      // findindex return the index of the where the word is
+      if (findIndex(uniqueArray, word) === -1) {
+        uniqueArray.push(word);
+      }
+     }
+     return uniqueArray;
+    }
+
+    console.log(findIndex(['hello', 'world', 'search', 'good', 'search'], 'search'));
+    console.log(unique(['green', 'red', 'blue', 'red']));
+    console.log(unique(['red', 'green', 'green', 'red']));
+
+  </script>
+</body>
+</html>
