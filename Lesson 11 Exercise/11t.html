@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11t</title>
+</head>
+<body>
+  <script>
+    function removeEggs(foods) {
+      // reverse the foods to remove the last two eggs 
+      const reversedFoods = foods.reverse();
+
+      const result = [];
+      let eggCounter = 0;
+      for (let i = 0; i < reversedFoods.length; i++) {
+        if (foods[i] === 'egg' && eggCounter < 2) {
+          eggCounter++;
+          continue;
+        } else {
+          result.push(reversedFoods[i]);
+        }
+      }
+      // return the result then reverse back to show the normal order of array
+      return result.reverse();
+    }
+
+    console.log(removeEggs(['egg', 'apple', 'egg', 'egg', 'egg', 'ham', 'egg']));
+  </script>
+</body>
+</html>
