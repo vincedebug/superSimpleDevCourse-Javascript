@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11q</title>
+</head>
+<body>
+  <script>
+    function findIndex(array, word) {
+    // loop through the array
+    for (let i = 0; i < array.length; i++) {
+      // check if theres a word search in every index
+      if (array[i] === word) {
+        // change the value of the index of search to the index of the word search
+        return i;
+      }
+    }
+    return -1;
+    }
+
+    console.log(findIndex(['hello', 'world', 'search', 'good', 'search'], 'search'));
+  </script>
+</body>
+</html>
