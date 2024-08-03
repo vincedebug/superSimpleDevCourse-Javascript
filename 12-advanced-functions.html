@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Functions</title>
+</head>
+<body>
+  <script>
+
+    /*
+    function greeting() {
+      console.log('hello');
+    }
+    greeting();
+
+    // we can save function in a variable
+    // anonymous function a function without a name because it just return a value by calling the variable name
+    const fn = function () {
+      console.log('hello world');
+    };
+
+    console.log(fn);
+
+    // we can call the function by calling the variable name that contains our function
+
+
+    // hoisting meaning calling the function before declaring it
+    fn();
+
+
+    // we can save the value in an object 
+    // function is an object 
+
+    const obj = {
+      greeting() {
+        console.log('hello obj');
+      }
+    };
+
+    obj.greeting();
+
+    // we can pass a function inside the function
+
+    function greet(param) {
+      param();
+    }
+
+    greet(function () {
+      console.log('hell')
+    });
+
+    */
+
+    // set timeout is a function use to delay the first value to evaluate
+    // in this case the function 
+    setTimeout(function() {
+      console.log(4);
+    }, 5000);
+
+    console.log('async?')
+
+    // asynchronous code means that not waiting for other code to execute but executing a code before other code even the other code is already read
+
+    // synchronous code will wait for the line of code to execute before executing nex code
+
+    setInterval(function() {
+      console.log('log every 3 seconds');
+    }, 3000);
+  </script>
+</body>
+</html>

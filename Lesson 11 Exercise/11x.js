@@ -6,12 +6,14 @@ const todoList = JSON.parse(localStorage.getItem('todoList')) || [{
   dueDate: '2022-12-22'
 }];
 
-// render the todo list when the page load
+// Render the todo list when the page load
 renderTodoList();
 
+// This Function is use to render the todo list in the screen
 function renderTodoList() {
   // this is use to stack the template in html and make it work
-  let todoListHTML = '';
+  // Why is it string? 
+  let todoListHTML = ''; 
 
   // loop through the todoList and add it to the  todoListHTML
   // push the items in the local storage if exist
