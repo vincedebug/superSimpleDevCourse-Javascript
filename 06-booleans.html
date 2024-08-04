@@ -5,6 +5,7 @@
   </head>
   <body>
     <script>
+      /*
         console.log(typeof 'true');
         false
 
@@ -21,6 +22,65 @@
         else {
             console.log('You can not drive');
         }
+
+        */
+
+        // the problem with var is that is doesnt follow the rule of scope
+
+        // var is not like let, when using let inside the scope the value can be change. 
+/*
+        function exampleFunction() {
+        // this is a function scope
+        if (true) {
+          // this is a block scope
+          var x = 10;  // x is function-scoped
+        }
+        console.log(x);  // Accessible here, prints 10
+        }
+
+        function anotherFunction() {
+          console.log(x);
+        }
+
+        anotherFunction()
+*/
+if (false === false) {
+    //console.log("This will not be logged");
+}
+
+if (0 == false) {
+   // console.log("This will not be logged");
+}
+
+if (-0 == false) {
+   // console.log("This will not be logged");
+}
+
+if (0n == false) {
+    // console.log("This will not be logged");
+}
+
+if ("" == false) {
+    console.log("This will not be logged");
+}
+
+if (null === false) {
+   // console.log("This will not be logged");
+}
+
+if (undefined === false) {
+   // console.log("This will not be logged");
+}
+
+if (NaN === false) {
+   // console.log("This will not be logged");
+}
+
+
+const str = '0';
+const num = 0;
+
+console.log(typeof (str == num));
 
     </script>
   </body>
